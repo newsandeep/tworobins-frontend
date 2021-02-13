@@ -1,0 +1,15 @@
+.feeds {
+    margin: 0px;
+    padding: 0px;
+    li {
+        list-style: none;
+        padding: 10px;
+        display: block;
+        &:hover {
+            background: $gray-100;
+        }
+        span {
+            font-size: 12px;
+        }
+    }
+}

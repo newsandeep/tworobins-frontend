@@ -1,0 +1,20 @@
+{
+      "Personal": "personnel",
+      "Starter Page":"Page de démarrage",
+      "UI Components": "Composants de l'interface",
+      "Component":"Composants",      
+      "Accordion": "Accordéon",
+      "Alert": "Alerte",
+      "Carousel": "Carrousel",
+      "Dropdown": "déroulant",
+      "Modal": "Modal",
+      "Pagination": "Pagination",
+      "Popover & Tooltip": "Popover et info-bulle",
+      "Progressbar": "Barre de progression",
+      "Ratings": "Évaluations",
+      "Tabs": "Onglets",
+      "Timepicker": "Timepicker",
+      "Button": "Button",
+      "Notifier": "Notifier",
+      "Cards": "Cartes"      
+    }

@@ -1,0 +1,152 @@
+<app-income-counter></app-income-counter>
+
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-10 col-md-10 col-lg-10">
+                        <h4 class="card-title">Total Product Scanned: 200</h4>
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2 hide-icon">
+                        <a href="javascript:void(0)">
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-10 col-md-10 col-lg-10">
+                        <h4 class="card-title">Total Sites Scanned: 10</h4>
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2 hide-icon">
+                        <a href="javascript:void(0)">
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-site-traffic></app-site-traffic>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title m-b-5">
+                    <span class="lstick"></span>Alert (Last 7 Days)</h4>
+                <div class="table-responsive">
+                    <table class="table table-striped no-wrap">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="javascript:void(0)" class="btn-link">1 day ago</a>
+                                </td>
+                                <td>Alias 1</td>
+                                <td>$45.00</td>
+
+                                <td>
+                                    <span class="text-muted">
+                                       <i class="ti-arrow-up text-success"></i> 50%</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-table label-success">Amazon</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="javascript:void(0)" class="btn-link">1 day ago</a>
+                                </td>
+                                <td>Alias 1</td>
+                                <td>$45.00</td>
+
+                                <td>
+                                    <span class="text-muted">
+                                       <i class="ti-arrow-up text-success"></i> 50%</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-table label-success">Amazon</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="javascript:void(0)" class="btn-link">1 day ago</a>
+                                </td>
+                                <td>Alias 1</td>
+                                <td>$45.00</td>
+
+                                <td>
+                                    <!-- <span class="text-muted">
+                                      <i class="ti-arrow-up text-success"></i> 50%</span> -->
+                                    <span class="label label-table label-success"></span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-table label-success">Amazon</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href="javascript:void(0)" class="btn-link">1 day ago</a>
+                                </td>
+                                <td>Alias 1</td>
+                                <td>$45.00</td>
+
+                                <td>
+                                    <!--<span class="text-muted">
+                                       <i class="ti-arrow-up text-success"></i> 50%</span> -->
+                                    <span class="label label-table label-success"></span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-table label-success">Amazon</span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-site-visit></app-site-visit>
+
+<div class="row" style="margin-top:-30px;">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex">
+
+                    <ul class="list-inline m-b-0 m-auto">
+                        <li class="list-inline-item">
+                            <h6 class="text-danger">
+                                <i class="fa fa-circle font-10 m-r-10 "></i>Site A</h6>
+                        </li>
+                        <li class="list-inline-item">
+                            <h6 class="text-info">
+                                <i class="fa fa-circle font-10 m-r-10"></i>Site B</h6>
+                        </li>
+                        <li class="list-inline-item">
+                            <h6 class="text-primary">
+                                <i class="fa fa-circle font-10 m-r-10"></i>Site C</h6>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m-t-20" style="height:350px;">
+                    <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"> </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

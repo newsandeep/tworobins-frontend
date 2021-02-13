@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800');
+.hide-icon .dropdown-toggle::after {
+    display: none !important;
+}
+
+.left-130 {
+    left: -130px !important;
+}
+
+.example-form-field {
+    margin-right: 20px;
+}

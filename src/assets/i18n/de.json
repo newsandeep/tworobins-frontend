@@ -1,0 +1,20 @@
+{
+    "Personal": "persönlich",  
+    "Starter Page":"Starter-Seite",
+    "UI Components": "UI-Komponenten",
+    "Component":"Komponente",    
+    "Accordion": "Akkordeon",
+    "Alert": "Aufmerksam",
+    "Carousel": "Karussell",
+    "Dropdown": "Dropdown-Liste",
+    "Modal": "Modal",
+    "Pagination": "Seitennummerierung",
+    "Popover & Tooltip": "Popover und Tooltip",
+    "Progressbar": "Fortschrittsanzeige",
+    "Ratings": "Bewertungen",
+    "Tabs": "Tabs",
+    "Timepicker": "Zeitmesser",
+    "Button": "Taste",
+    "Notifier": "Notifier",
+    "Cards": "Karten"  
+  }

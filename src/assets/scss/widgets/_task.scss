@@ -1,0 +1,55 @@
+.todo-list {
+    li {
+        border: 0px;
+        margin-bottom: 0px;
+        padding: 20px 15px 15px 0px;
+        .todo-label {
+            width: 100%;
+        }
+        .checkbox {
+            width: 100%;
+            label {
+                font-weight: 400;
+                color: $body-color;
+            }
+        }
+        &:last-child {
+            border-bottom: 0px;
+        }
+        .assignedto {
+            padding: 0px 0 0 27px;
+            margin: 0px;
+            li {
+                list-style: none;
+                padding: 0px;
+                display: inline-block;
+                border: 0px;
+                margin-right: 2px;
+                img {
+                    width: 30px;
+                    border-radius: 100%;
+                }
+            }
+        }
+        .item-date {
+            padding-left: 25px;
+            font-size: 12px;
+            display: inline-block;
+        }
+    }
+}
+
+.list-task .task-done span {
+    text-decoration: line-through;
+}
+
+.app-sidebar {
+    right: 0;
+    position: fixed;
+    width: 0;
+    top: 60px;
+    height: 100%;
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.2s ease-in;
+    z-index: 99;
+}

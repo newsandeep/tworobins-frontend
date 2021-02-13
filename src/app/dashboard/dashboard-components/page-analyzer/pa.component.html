@@ -1,0 +1,85 @@
+<div class="row analytics-info">
+    <div class="col-lg-3 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">
+                    <span class="lstick"></span>Total Visit</h4>
+                <div class="d-flex align-items-center m-t-20">
+                    <div style="height: 55px; width: 100px">
+                        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels"
+                            [options]="barChartOptions" [colors]="barChartColors" [legend]="barChartLegend"
+                            [chartType]="barChartType">
+                        </canvas>
+                    </div>
+                    <div class="ml-auto">
+                        <i class="ti-arrow-up text-success"></i>
+                        <span class="counter text-success">8659</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">
+                    <span class="lstick"></span>Total Page Views</h4>
+                <div class="d-flex align-items-center m-t-20">
+                    <div style="height: 55px; width: 100px">
+                        <canvas baseChart [datasets]="barChartData2" [labels]="barChartLabels2"
+                            [options]="barChartOptions2" [colors]="barChartColors2" [legend]="barChartLegend2"
+                            [chartType]="barChartType2">
+                        </canvas>
+                    </div>
+                    <div class="ml-auto">
+                        <i class="ti-arrow-up text-purple"></i>
+                        <span class="counter text-purple">7469</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">
+                    <span class="lstick"></span>Unique Visitors</h4>
+                <div class="d-flex align-items-center m-t-20">
+                    <div style="height: 55px; width: 100px">
+                        <canvas baseChart [datasets]="barChartData3" [labels]="barChartLabels3"
+                            [options]="barChartOptions3" [colors]="barChartColors3" [legend]="barChartLegend3"
+                            [chartType]="barChartType3">
+                        </canvas>
+                    </div>
+                    <div class="ml-auto">
+                        <i class="ti-arrow-up text-info"></i>
+                        <span class="counter text-info">6011</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">
+                    <span class="lstick"></span>Bounce Rate</h4>
+                <div class="d-flex align-items-center m-t-20">
+                    <div style="height: 55px; width: 100px">
+                        <canvas baseChart [datasets]="barChartData4" [labels]="barChartLabels4"
+                            [options]="barChartOptions4" [colors]="barChartColors4" [legend]="barChartLegend4"
+                            [chartType]="barChartType4">
+                        </canvas>
+                    </div>
+                    <div class="ml-auto">
+                        <i class="ti-arrow-up text-danger"></i>
+                        <span class="counter text-danger">18%</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
