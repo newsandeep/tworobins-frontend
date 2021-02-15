@@ -7,6 +7,7 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { FormControl, FormGroup } from '@angular/forms';
 declare var $: any;
 
 @Component({
@@ -18,7 +19,10 @@ export class NavigationComponent implements AfterViewInit {
 
   public config: PerfectScrollbarConfigInterface = {};
 
-  public showSearch = false;
+  range = new FormGroup({
+    start: new FormControl(),
+    end: new FormControl()
+  });
 
   // This is for Notifications
   notifications: Object[] = [
@@ -52,38 +56,7 @@ export class NavigationComponent implements AfterViewInit {
     }
   ];
 
-  // This is for Mymessages
-  mymessages: Object[] = [
-    {
-      useravatar: 'assets/images/users/1.jpg',
-      status: 'online',
-      from: 'Pavan kumar',
-      subject: 'Just see the my admin!',
-      time: '9:30 AM'
-    },
-    {
-      useravatar: 'assets/images/users/2.jpg',
-      status: 'busy',
-      from: 'Sonu Nigam',
-      subject: 'I have sung a song! See you at',
-      time: '9:10 AM'
-    },
-    {
-      useravatar: 'assets/images/users/2.jpg',
-      status: 'away',
-      from: 'Arijit Sinh',
-      subject: 'I am a singer!',
-      time: '9:08 AM'
-    },
-    {
-      useravatar: 'assets/images/users/4.jpg',
-      status: 'offline',
-      from: 'Pavan kumar',
-      subject: 'Just see the my admin!',
-      time: '9:00 AM'
-    }
-  ];
-
+  
   
   public selectedLanguage: any = {
     language: 'English',

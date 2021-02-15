@@ -11,7 +11,15 @@
     <!-- Search -->
     <!-- ============================================================== -->
     <li class="nav-item m-l-10 align-self-center d-none d-md-block">
-        Date Range Filter
+        <mat-form-field appearance="outline">
+            <mat-label style="color: white;">Select Date Range</mat-label>
+            <mat-date-range-input [rangePicker]="picker" [formGroup]="range">
+                <input matStartDate placeholder="Start Date" formControlName="start" style="color: white;">
+                <input matEndDate placeholder="End Date" formControlName="end" style="color: white;">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker" style="color: white;"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker style="color: white;"></mat-date-range-picker>
+        </mat-form-field>
     </li>
 </ul>
 <!-- ============================================================== -->

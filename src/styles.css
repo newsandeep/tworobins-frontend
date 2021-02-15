@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800');
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 .hide-icon .dropdown-toggle::after {
     display: none !important;
 }
@@ -11,4 +12,8 @@
 
 .example-form-field {
     margin-right: 20px;
+}
+
+.nav-item .mat-form-field-wrapper {
+    padding-bottom: 0em !important;
 }
