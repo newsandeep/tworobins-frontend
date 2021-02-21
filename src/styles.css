@@ -17,3 +17,7 @@
 .nav-item .mat-form-field-wrapper {
     padding-bottom: 0em !important;
 }
+
+.dropdown-menu .dropdown-item {
+    line-height: 1.5px !important;
+}

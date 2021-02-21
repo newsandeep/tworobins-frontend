@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,17 @@ const routes: Routes = [
       ]
     },
     component: LoginComponent
+  },
+  {
+    path: 'signup',
+    data: {
+      title: 'Login Page',
+      urls: [
+        { title: 'Admin SignUp', url: '/signup' },
+        { title: 'Admin SignUp' }
+      ]
+    },
+    component: SignupComponent
   }
 ];
 

@@ -12,6 +12,7 @@ import { StarterComponent } from './starter.component';
 import { SiteTrafficComponent } from './dashboard-components/site-traffic/site-traffic.component';
 import { SiteVisitComponent } from './dashboard-components/site-visit/site-visit.component';
 import { IncomeCounterComponent } from './dashboard-components/income-counter/income-counter.component';
+import { PriceProductMatrixComponent } from './dashboard-components/price-product-matrix/price-product-matrix.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { IncomeCounterComponent } from './dashboard-components/income-counter/in
     StarterComponent,
     IncomeCounterComponent,
     SiteTrafficComponent,
-    SiteVisitComponent
+    SiteVisitComponent,
+    PriceProductMatrixComponent
   ],
   imports: [ 
     FormsModule,

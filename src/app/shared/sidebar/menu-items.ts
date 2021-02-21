@@ -18,7 +18,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/dashboard',
+    path: '/dashboard/price-product',
     title: 'Product',
     icon: 'ti-palette',
     class: '',

@@ -6,8 +6,10 @@ import {
   NgbCarouselConfig
 } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { FormControl, FormGroup } from '@angular/forms';
+import { AuthenticationService } from './../../service/authentication.service';
 declare var $: any;
 
 @Component({
@@ -89,7 +91,8 @@ export class NavigationComponent implements AfterViewInit {
 
 
 
-  constructor(private modalService: NgbModal, private translate: TranslateService) {
+    
+    constructor(private authService: AuthenticationService, private modalService: NgbModal, private router: Router, private translate: TranslateService) {
     translate.setDefaultLang('en');
   }
 
@@ -99,4 +102,8 @@ export class NavigationComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {}
+
+  logout() {
+    this.authService.logout()
+	}
 }

@@ -10,7 +10,7 @@ export class SiteTrafficComponent {
   // line chart 2
 
   public lineChartData1: Array<any> = [
-    { data: [22, 20, 26, 25, 19], label: 'Bounce %' }
+    { data: [22, 25, 30, 25, 40], label: 'Share %' }
   ];
   public lineChartLabels1: Array<any> = ['1', '5', '10', '3', '8'];
   public lineChartOptions1: any = {
@@ -28,7 +28,7 @@ export class SiteTrafficComponent {
         ticks: {
           min: 0,
           max: 30,
-          stepSize: 10,
+          stepSize: 20,
           beginAtZero: true
         }
       }]
@@ -56,7 +56,7 @@ export class SiteTrafficComponent {
   // line chart 2
 
   public lineChartData2: Array<any> = [
-    { data: [22, 20, 26, 25, 19], label: 'Bounce %' }
+    { data: [22, 20, 26, 25, 19], label: 'Share %' }
   ];
   public lineChartLabels2: Array<any> = ['1', '5', '10', '3', '8'];
   public lineChartOptions2: any = {
@@ -102,7 +102,7 @@ export class SiteTrafficComponent {
   // line chart 3
 
   public lineChartData3: Array<any> = [
-    { data: [22, 20, 26, 25, 19], label: 'Bounce %' }
+    { data: [22, 20, 26, 25, 19], label: 'Share %' }
   ];
   public lineChartLabels3: Array<any> = ['1', '5', '10', '3', '8'];
   public lineChartOptions3: any = {
