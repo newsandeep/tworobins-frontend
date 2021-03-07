@@ -16,15 +16,14 @@ export class AuthInterceptor implements HttpInterceptor {
 
         // this.loaderService.show();
         // add authorization header with basic auth credentials if available
-        const currentUser = this.authService.currentUserValue;
-        // const isLoggedIn = currentUser && currentUser.token;
-        const isLoggedIn = currentUser;
+        const currentUser = this.authService.currentUserValue ? this.authService.currentUserValue : JSON.parse(localStorage.getItem('currentUser'));
+        const isLoggedIn = currentUser && currentUser.token && this.authService.isLogin();
         const isApiUrl = request.url.startsWith(environment.baseUrl);
         if (isLoggedIn && isApiUrl) {
+
             request = request.clone({
                 setHeaders: {
-                    // Authorization: `Bearer ${currentUser.token}`
-                    Authorization: `Bearer ${currentUser.userId}`
+                    auth_token: `${currentUser.token}`
                 }
             });
         }

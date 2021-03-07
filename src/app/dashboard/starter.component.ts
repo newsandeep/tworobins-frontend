@@ -1,14 +1,14 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { ServiceService } from './service.service';
 @Component({
   templateUrl: './starter.component.html'
 })
 export class StarterComponent implements AfterViewInit {
-  // subtitle: string;
-  constructor() {
-    // this.subtitle = 'This is some text within a card block.';
-  }
-
-  // lineChart
+  totalSiteScanned: any;
+  totatProductScanned: any;
+  alertResponse: any;
+  lineChartResponse: any;
   public lineChartData: Array<any> = [
     { data: [0, 50, 20, 60, 30, 25, 10, 24], label: "Iphone" },
     { data: [0, 15, 50, 12, 20, 80, 10, 1], label: "Ipad" },
@@ -23,6 +23,67 @@ export class StarterComponent implements AfterViewInit {
     "2015",
     "2016",
   ];
+
+  constructor(private dashboardService: ServiceService, private toastr: ToastrService) {
+    this.totalScannedReport();
+    this.getAlertReport();
+    this.getLineChartReport();
+  }
+
+
+  totalScannedReport() {
+    this.dashboardService.totalScanned().subscribe(
+      responseData => {
+        if (responseData?.responseCode == 200) {
+          this.totalSiteScanned = responseData.totalSiteScanned;
+          this.totatProductScanned = responseData.totatProductScanned;
+
+        } else {
+          this.toastr.error(responseData?.responseMessage);
+        }
+
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
+
+
+  getAlertReport() {
+    this.dashboardService.getAlert().subscribe(
+      responseData => {
+        if (responseData?.responseCode == 200) {
+          this.alertResponse = responseData.alertResponse
+
+        } else {
+          this.toastr.error(responseData?.responseMessage);
+        }
+
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
+
+  getLineChartReport() {
+    this.dashboardService.lineChart().subscribe(
+      responseData => {
+        if (responseData?.responseCode == 200) {
+          this.lineChartData = responseData.lineChartData;
+          this.lineChartLabels = responseData.lineChartLabels
+        } else {
+          this.toastr.error(responseData?.responseMessage);
+        }
+
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
+
   public lineChartOptions: any = {
     scales: {
       yAxes: [
@@ -70,10 +131,11 @@ export class StarterComponent implements AfterViewInit {
       pointBorderColor: "rgba(251,150,120,1)",
       pointHoverBackgroundColor: "rgba(251,150,120,1)",
       pointHoverBorderColor: "rgba(251,150,120,1)",
-    },
+    }
+
   ];
   public lineChartLegend = false;
   public lineChartType = "line";
 
-  ngAfterViewInit() {}
+  ngAfterViewInit() { }
 }

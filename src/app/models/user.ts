@@ -7,6 +7,8 @@ export class User {
   phone: string;
   role: string;
   token?: string;
+  responseCode:number;
+  responseMessage:string;
 }
 
 

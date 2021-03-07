@@ -1,0 +1,87 @@
+<!-- .row -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <form [formGroup]="preferencesForm" (ngSubmit)="onSubmit()" class="form" id="preferencesForm">
+
+                    <div class="form-group m-t-40 row">
+                        <label for="example-url-input" class="col-2 col-form-label">URL Scrap</label>
+                        <div class="col-10">
+                            <input type="url" class="form-control" placeholder="url" aria-describedby="basic-addon1" name="url_scrap" formControlName="url_scrap" [ngClass]="{'is-invalid': submitted && f.url_scrap.errors}">
+                            <div *ngIf="submitted && f.url_scrap.errors" class="invalid-feedback">
+                                <div *ngIf="f.url_scrap.errors.required">url Scrap is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">Product Scrap</label>
+                        <div class="col-10">
+                            <input type="text" class="form-control" placeholder="product scrap" name="product_scrap" formControlName="product_scrap" [ngClass]="{'is-invalid': submitted && f.product_scrap.errors}">
+                            <div *ngIf="submitted && f.product_scrap.errors" class="invalid-feedback">
+                                <div *ngIf="f.product_scrap.errors.required">product Scrap is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-month-input2" class="col-2 col-form-label">Category</label>
+                        <div class="col-10">
+                            <input type="text" class="form-control" placeholder="product scrap" name="category" formControlName="category" [ngClass]="{'is-invalid': submitted && f.category.errors}">
+                            <div *ngIf="submitted && f.category.errors" class="invalid-feedback">
+                                <div *ngIf="f.category.errors.required">category is required.</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">SKU</label>
+                        <div class="col-10">
+                            <input type="text" class="form-control" placeholder="sku" name="sku" formControlName="sku" [ngClass]="{'is-invalid': submitted && f.sku.errors}">
+                            <div *ngIf="submitted && f.sku.errors" class="invalid-feedback">
+                                <div *ngIf="f.sku.errors.required">sku is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">Price</label>
+                        <div class="col-10">
+                            <input type="text" class="form-control" placeholder="price" name="price" formControlName="price" [ngClass]="{'is-invalid': submitted && f.price.errors}">
+                            <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                                <div *ngIf="f.price.errors.required">price is required.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">Variance Percentage</label>
+                        <div class="col-10">
+                            <input type="text" class="form-control" placeholder="variance percentage" name="variancepercentage" formControlName="variancepercentage" [ngClass]="{'is-invalid': submitted && f.variancepercentage.errors}">
+                            <div *ngIf="submitted && f.variancepercentage.errors" class="invalid-feedback">
+                                <div *ngIf="f.variancepercentage.errors.required">variance percentage is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">Seller</label>
+                        <div class="col-10">
+                            <input type="text" class="form-control" placeholder="seller" name="seller" formControlName="seller" [ngClass]="{'is-invalid': submitted && f.seller.errors}">
+                            <div *ngIf="submitted && f.seller.errors" class="invalid-feedback">
+                                <div *ngIf="f.seller.errors.required">seller is required.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <div class="card-body">
+                            <button type="submit" class="btn btn-success">
+                                <i class="fa fa-check"></i> Save</button>
+                            <button type="button" class="btn btn-dark">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.row -->

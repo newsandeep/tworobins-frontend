@@ -7,16 +7,16 @@
                 <div class="row m-t-20 m-b-20">
                     <div class="col-6 border-right">
                         <h6>No. of Products</h6>
-                        <b>50</b>
+                        <b>{{overPriced?.total_product}}</b>
                     </div>
                     <div class="col-6">
                         <h6>% share</h6>
-                        <b>20%</b>
+                        <b>{{overPriced?.total_share}}%</b>
                     </div>
                 </div>
             </div>
             <div style="height: 60px;">
-                <canvas baseChart [datasets]="lineChartData1" [labels]="lineChartLabels1" [options]="lineChartOptions1" [colors]="lineChartColors1" [legend]="lineChartLegend1" [chartType]="lineChartType1">
+                <canvas baseChart [datasets]="overPricedChartData" [labels]="overPricedChartLabels" [options]="overPricedChartOptions" [colors]="overPricedChartColors" [legend]="overPricedChartLegend" [chartType]="overPricedChartType">
                 </canvas>
             </div>
         </div>
@@ -30,16 +30,16 @@
                 <div class="row m-t-20 m-b-20">
                     <div class="col-6 border-right">
                         <h6>No. of Products</h6>
-                        <b>50</b>
+                        <b>{{inlinePriced?.total_product}}</b>
                     </div>
                     <div class="col-6">
                         <h6>% share</h6>
-                        <b>20%</b>
+                        <b>{{inlinePriced?.total_share}}%</b>
                     </div>
                 </div>
             </div>
             <div style="height: 60px;">
-                <canvas baseChart [datasets]="lineChartData2" [labels]="lineChartLabels2" [options]="lineChartOptions2" [colors]="lineChartColors2" [legend]="lineChartLegend2" [chartType]="lineChartType2">
+                <canvas baseChart [datasets]="inlinePricedChartData" [labels]="inlinePricedChartLabels" [options]="inlinePricedChartOptions" [colors]="inlinePricedChartColors" [legend]="inlinePricedChartLegend" [chartType]="inlinePricedChartType">
                 </canvas>
             </div>
         </div>
@@ -53,16 +53,16 @@
                 <div class="row m-t-20 m-b-20">
                     <div class="col-6 border-right">
                         <h6>No. of Products</h6>
-                        <b>50</b>
+                        <b>{{underPriced?.total_product}}</b>
                     </div>
                     <div class="col-6">
                         <h6>% share</h6>
-                        <b>20%</b>
+                        <b>{{underPriced?.total_share}}%</b>
                     </div>
                 </div>
             </div>
             <div style="height: 60px;">
-                <canvas baseChart [datasets]="lineChartData3" [labels]="lineChartLabels3" [options]="lineChartOptions3" [colors]="lineChartColors3" [legend]="lineChartLegend3" [chartType]="lineChartType3">
+                <canvas baseChart [datasets]="underPricedChartData" [labels]="underPricedChartLabels" [options]="underPricedChartOptions" [colors]="underPricedChartColors" [legend]="underPricedChartLegend" [chartType]="underPricedChartType">
                 </canvas>
             </div>
         </div>
@@ -77,16 +77,16 @@
                 <div class="row m-t-20 m-b-20">
                     <div class="col-6 border-right">
                         <h6>No. of Products</h6>
-                        <b>50</b>
+                        <b>{{noCompetitor?.total_product}}</b>
                     </div>
                     <div class="col-6">
                         <h6>% share</h6>
-                        <b>20%</b>
+                        <b>{{noCompetitor?.total_share}}%</b>
                     </div>
                 </div>
             </div>
             <div style="height: 60px;">
-                <canvas baseChart [datasets]="lineChartData4" [labels]="lineChartLabels4" [options]="lineChartOptions4" [colors]="lineChartColors4" [legend]="lineChartLegend4" [chartType]="lineChartType4">
+                <canvas baseChart [datasets]="noCompetitorChartData" [labels]="noCompetitorChartLabels" [options]="noCompetitorChartOptions" [colors]="noCompetitorChartColors" [legend]="noCompetitorChartLegend" [chartType]="noCompetitorChartType">
                 </canvas>
             </div>
         </div>

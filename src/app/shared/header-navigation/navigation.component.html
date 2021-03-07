@@ -11,15 +11,18 @@
     <!-- Search -->
     <!-- ============================================================== -->
     <li class="nav-item m-l-10 align-self-center d-none d-md-block">
-        <mat-form-field appearance="outline">
-            <mat-label style="color: white;">Select Date Range</mat-label>
-            <mat-date-range-input [rangePicker]="picker" [formGroup]="range">
-                <input matStartDate placeholder="Start Date" formControlName="start" style="color: white;">
-                <input matEndDate placeholder="End Date" formControlName="end" style="color: white;">
-            </mat-date-range-input>
-            <mat-datepicker-toggle matSuffix [for]="picker" style="color: white;"></mat-datepicker-toggle>
-            <mat-date-range-picker #picker style="color: white;"></mat-date-range-picker>
-        </mat-form-field>
+        <form [formGroup]="range" (ngSubmit)="onFormSubmit()">
+            <mat-form-field appearance="outline">
+                <mat-label style="color: white;">Select Date Range</mat-label>
+                <mat-date-range-input [rangePicker]="picker">
+                    <input matStartDate placeholder="Start Date" formControlName="start" style="color: white;">
+                    <input matEndDate placeholder="End Date" formControlName="end" style="color: white;">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matSuffix [for]="picker" style="color: white;"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker style="color: white;"></mat-date-range-picker>
+            </mat-form-field>
+            <button>Submit</button>
+        </form>
     </li>
 </ul>
 <!-- ============================================================== -->
@@ -90,9 +93,8 @@
             <div class="dropdown-menu animated flipInY left-130" ngbDropdownMenu>
                 <a href="#" class="dropdown-item">
                     <i class="ti-user"></i> My Profile</a>
-                <a href="#" class="dropdown-item">
-                    <i class="ti-wallet"></i> My Balance</a>
-                <a href="#" class="dropdown-item"> <i class="ti-email"></i> Inbox</a>
+                <a [routerLink]="['dashboard/preferences']" class="dropdown-item">
+                    <i class="ti-settings"></i> Preferences</a>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item">
                     <i class="ti-settings"></i> Account Setting</a>

@@ -13,10 +13,10 @@
                     <!--/span-->
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label">Select A Site</label>
-                            <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" (change)="filterWithSite($event.target.value)">
-                                <option  [value]=""  >Select A Site</option>
-                                <option  *ngFor="let site of siteUrl" [value]="site"  >{{site}}</option>
+                            <label class="control-label">Select A Product</label>
+                            <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" (change)="filterWithProduct($event.target.value)">
+                                <option  [value]=""  >Select A Product</option>
+                                <option  *ngFor="let product of productName" [value]="product"  >{{product}}</option>
                             </select>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Product Name</th>
+                                <th scope="col">Site Name</th>
                                 <th scope="col">Deviation</th>
                                 <th scope="col">XO Price</th>
                                 <th scope="col">Minimum Price</th>
@@ -37,8 +37,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let item of productMatrixResponse">
-                                <th scope="row">{{item.productName}}</th>
+                            <tr *ngFor="let item of siteMatrixResponse">
+                                <th scope="row">{{item.siteUrl}}</th>
                                 <td [ngClass]="{'bg-success': item.deviation > 0, 'bg-danger': item.deviation < 0, 'bg-warning': item.deviation == 0 }">{{item.deviation}}%</td>
                                 <td>{{item.xoPrice}}</td>
                                 <td>{{item.minPrice}}</td>

@@ -1,4 +1,4 @@
-<app-income-counter></app-income-counter>
+<!-- <app-income-counter></app-income-counter> -->
 
 <div class="row">
     <div class="col-sm-12 col-md-6 col-lg-6">
@@ -6,7 +6,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm-10 col-md-10 col-lg-10">
-                        <h4 class="card-title">Total Product Scanned: 200</h4>
+                        <h4 class="card-title">Total Product Scanned: <b>{{totatProductScanned}}</b></h4>
                     </div>
                     <div class="col-sm-2 col-md-2 col-lg-2 hide-icon">
                         <a href="javascript:void(0)">
@@ -22,7 +22,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm-10 col-md-10 col-lg-10">
-                        <h4 class="card-title">Total Sites Scanned: 10</h4>
+                        <h4 class="card-title">Total Sites Scanned: <b>{{totalSiteScanned}}</b></h4>
                     </div>
                     <div class="col-sm-2 col-md-2 col-lg-2 hide-icon">
                         <a href="javascript:void(0)">
@@ -48,68 +48,17 @@
                 <div class="table-responsive">
                     <table class="table table-striped no-wrap">
                         <tbody>
-                            <tr>
-                                <td>
-                                    <a href="javascript:void(0)" class="btn-link">1 day ago</a>
-                                </td>
-                                <td>Alias 1</td>
-                                <td>$45.00</td>
 
-                                <td>
-                                    <span class="text-muted">
-                                       <i class="ti-arrow-up text-success"></i> 50%</span>
-                                </td>
-                                <td class="text-center">
-                                    <span class="label label-table label-success">Amazon</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="javascript:void(0)" class="btn-link">1 day ago</a>
-                                </td>
-                                <td>Alias 1</td>
-                                <td>$45.00</td>
-
-                                <td>
-                                    <span class="text-muted">
-                                       <i class="ti-arrow-up text-success"></i> 50%</span>
-                                </td>
-                                <td class="text-center">
-                                    <span class="label label-table label-success">Amazon</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="javascript:void(0)" class="btn-link">1 day ago</a>
-                                </td>
-                                <td>Alias 1</td>
-                                <td>$45.00</td>
-
-                                <td>
-                                    <!-- <span class="text-muted">
-                                      <i class="ti-arrow-up text-success"></i> 50%</span> -->
-                                    <span class="label label-table label-success"></span>
-                                </td>
-                                <td class="text-center">
-                                    <span class="label label-table label-success">Amazon</span>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a href="javascript:void(0)" class="btn-link">1 day ago</a>
-                                </td>
-                                <td>Alias 1</td>
-                                <td>$45.00</td>
-
-                                <td>
-                                    <!--<span class="text-muted">
-                                       <i class="ti-arrow-up text-success"></i> 50%</span> -->
-                                    <span class="label label-table label-success"></span>
-                                </td>
-                                <td class="text-center">
-                                    <span class="label label-table label-success">Amazon</span>
-                                </td>
+                            <tr *ngFor="let item of alertResponse">
+                                <th scope="row">
+                                    <a href="javascript:void(0)" class="btn-link">   
+                                    {{item.day}}</a>
+                                </th>
+                                <td>{{item.alias}}</td>
+                                <td>{{item.price}}</td>
+                                <td><span class="text-muted">
+                                       <i class="ti-arrow-up text-success"></i>{{item.percentage}}</span></td>
+                                <td class="text-center"><span class="label label-table label-success">{{item.object}}</span></td>
                             </tr>
 
                         </tbody>
@@ -131,15 +80,15 @@
                     <ul class="list-inline m-b-0 m-auto">
                         <li class="list-inline-item">
                             <h6 class="text-danger">
-                                <i class="fa fa-circle font-10 m-r-10 "></i>Site A</h6>
+                                <i class="fa fa-circle font-10 m-r-10 "></i>amazon</h6>
                         </li>
                         <li class="list-inline-item">
                             <h6 class="text-info">
-                                <i class="fa fa-circle font-10 m-r-10"></i>Site B</h6>
+                                <i class="fa fa-circle font-10 m-r-10"></i>ebay</h6>
                         </li>
                         <li class="list-inline-item">
                             <h6 class="text-primary">
-                                <i class="fa fa-circle font-10 m-r-10"></i>Site C</h6>
+                                <i class="fa fa-circle font-10 m-r-10"></i>catch</h6>
                         </li>
                     </ul>
                 </div>

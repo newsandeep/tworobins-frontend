@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { ChartsModule } from 'ng2-charts';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -13,6 +14,8 @@ import { SiteTrafficComponent } from './dashboard-components/site-traffic/site-t
 import { SiteVisitComponent } from './dashboard-components/site-visit/site-visit.component';
 import { IncomeCounterComponent } from './dashboard-components/income-counter/income-counter.component';
 import { PriceProductMatrixComponent } from './dashboard-components/price-product-matrix/price-product-matrix.component';
+import { PriceSiteMatrixComponent } from './dashboard-components/price-site-matrix/price-site-matrix.component';
+import { PreferencesComponent } from './dashboard-components/preferences/preferences.component';
 
 
 @NgModule({
@@ -21,16 +24,20 @@ import { PriceProductMatrixComponent } from './dashboard-components/price-produc
     IncomeCounterComponent,
     SiteTrafficComponent,
     SiteVisitComponent,
-    PriceProductMatrixComponent
+    PriceProductMatrixComponent,
+    PriceSiteMatrixComponent,
+    PreferencesComponent
   ],
   imports: [ 
     FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     NgbModule,
     ChartsModule,
     ChartistModule,
     DashboardRoutingModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    NgxDatatableModule
   ]
 })
 export class DashboardModule { }
